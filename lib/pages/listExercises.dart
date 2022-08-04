@@ -666,11 +666,11 @@ class ListExercisesState extends State<ListExercises> {
                                     child: Text(
                                       ex.pausa.substring(
                                               0, ex.pausa.indexOf("/")) +
-                                          "''" +
+                                          "'" +
                                           ex.pausa.substring(
                                               ex.pausa.indexOf("/") + 1,
                                               ex.pausa.length) +
-                                          "'",
+                                          "''",
                                       style: GoogleFonts.lato(
                                           fontSize: 16.0,
                                           color: Colors.black,
