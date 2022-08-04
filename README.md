@@ -9,6 +9,6 @@
 <p>This app allows you to create personalized gym cards and help you during your workout by showing you the exercise to do and counting the rest times for you.</p>
 <br>
 <h2 >Running</h2>
-<p>Download the apk release from <a href="https://github.com/aleambruoso/MyGym/releases/tag/v1.0">here</a></p>
+<p>Download the apk release from <a href="https://github.com/aleambruoso/MyGym/releases/tag/v1.0.0">here</a></p>
 <p>or</p>
 <p>Download the project and type <pre><code>flutter build apk --release</code></pre> to get the apk file.</p>
