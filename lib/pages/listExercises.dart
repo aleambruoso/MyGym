@@ -40,6 +40,7 @@ class ListExercisesState extends State<ListExercises> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
           centerTitle: true,
@@ -176,9 +177,10 @@ class ListExercisesState extends State<ListExercises> {
               child: Text(
                 'Nessun elemento presente',
                 style: GoogleFonts.montserrat(
-                    fontSize: 24.0,
+                    fontSize: 26.0,
                     color: Colors.black,
                     fontWeight: FontWeight.w800),
+                textAlign: TextAlign.center,
               ))));
     }
     return panels;
