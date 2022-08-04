@@ -116,35 +116,37 @@ class ListExercisesState extends State<ListExercises> {
                   ),
                 ),
               ),
-        body: Container(
-          decoration: BoxDecoration(color: Colors.white),
-          child: FutureBuilder(
-            future: getExercises(),
-            builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return CircularProgressIndicator(
-                  color: Color(0xffDF752C),
-                  strokeWidth: 5,
-                );
-              } else {
-                if (snapshot.hasData) {
-                  return Padding(
-                    padding: EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height * 0.05,
-                        right: MediaQuery.of(context).size.width * 0.05,
-                        left: MediaQuery.of(context).size.width * 0.05),
-                    child: Column(
-                      children: _getPanel(context, snapshot.data),
-                    ),
-                  );
-                } else {
+        body: SingleChildScrollView(
+          child: Container(
+            decoration: BoxDecoration(color: Colors.white),
+            child: FutureBuilder(
+              future: getExercises(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
                   return CircularProgressIndicator(
                     color: Color(0xffDF752C),
                     strokeWidth: 5,
                   );
+                } else {
+                  if (snapshot.hasData) {
+                    return Padding(
+                      padding: EdgeInsets.only(
+                          top: MediaQuery.of(context).size.height * 0.05,
+                          right: MediaQuery.of(context).size.width * 0.05,
+                          left: MediaQuery.of(context).size.width * 0.05),
+                      child: Column(
+                        children: _getPanel(context, snapshot.data),
+                      ),
+                    );
+                  } else {
+                    return CircularProgressIndicator(
+                      color: Color(0xffDF752C),
+                      strokeWidth: 5,
+                    );
+                  }
                 }
-              }
-            },
+              },
+            ),
           ),
         ),
       ),
